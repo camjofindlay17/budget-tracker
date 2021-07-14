@@ -36,7 +36,7 @@ function checkRecord() {
       if (retrieveAll.result.length > 0) {
         fetch('/api/transaction/bulk', {
             method: 'POST',
-            body: JSON.stringify(retieveAll.result),
+            body: JSON.stringify(retrieveAll.result),
             headers: {
               Accept: 'application/json, text/plain, */*',
               'Content-Type': 'application/json',

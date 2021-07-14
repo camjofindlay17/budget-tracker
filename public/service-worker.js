@@ -27,9 +27,9 @@ const DATA_CACHE = "data-cache-v1";
     e.waitUntil(
       caches.keys().then(keyList => {
         return Promise.all(
-          keyList.map(data => {
-            if (data !== CACHE_NAME && data !== DATA_CACHE) {
-              console.log("Removing old cache data", data);
+          keyList.map(key => {
+            if (key !== CACHE_NAME && data !== DATA_CACHE) {
+              console.log("Removing old cache data", key);
               return caches.delete(data);
             }
           })
